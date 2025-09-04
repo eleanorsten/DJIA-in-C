@@ -11,22 +11,22 @@ Measures storage time
 Measures retrieval (fetch) time
 Ensures correctness of lookups across all dictionary types
 
-How It Works
+## How It Works
 1. Load the DJIA data from a CSV file (date and opening price).
 2. Store all entries in each dictionary implementation.
 3. Fetch ~13,000 dates (one intentionally missing) to validate correctness.
 4. Compare execution time for storing and fetching across all implementations.
 5. Print results for each dictionary type.
 
-Installation 
+## Installation 
 Ensure DJIA file and C file are in the same directory
 Compile C file
 gcc DJIA_Assess.c -o myFile
 Run File
 ./myFile
 
-Output
-Example output:
+## Output
+### Example output:
 Store time with Array-Based Dictionary is 0.45s
 All fetches matched for Array-Based Dictionary, time is 0.62s!
 Store time with Linked List-Based Dictionary is 0.51s
@@ -42,26 +42,26 @@ Hash table (double hashing)
 Measures and reports store and fetch times.
 Provides insights into data structure trade-offs.
 
-Implementation Components
+## Implementation Components
 Programming Language: C
 Libraries:
 printf, fprintf, malloc, free, exit,fopen, fclose, getline, strcmp, sscanf, strdup
 Dataset: Historical DJIA data
 
-Big-O Analysis
-Array-Based Dictionary
+## Big-O Analysis
+### Array-Based Dictionary
 - **Store:** O(1) per insert → O(n) total  
 - **Fetch:** O(n) (linear search by key)  
 - **Use Case:** Simple, but inefficient for large datasets
-Linked List-Based Dictionary
+### Linked List-Based Dictionary
 - **Store:** O(1) per insert (append at head/tail) → O(n) total  
 - **Fetch:** O(n) (linear traversal)  
 - **Use Case:** Flexible size, but poor lookup performance	
-Hash Table-Based Dictionary (Double Hashing)
+### Hash Table-Based Dictionary (Double Hashing)
 - **Store:** O(1) average per insert → O(n) total  
 - **Fetch:** O(1) average, O(n) worst-case (with collisions)  
 - **Use Case:** Scales well, efficient for large datasets
-Acknowledgments
+## Acknowledgments
 Developed by: Eleanor Stenberg
 Acknowledgments:
 Prof. Jieyang Chen, Computer Science, University of Oregon
