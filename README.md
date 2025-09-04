@@ -19,11 +19,11 @@ Ensures correctness of lookups across all dictionary types
 5. Print results for each dictionary type.
 
 ## Installation 
-Ensure DJIA file and C file are in the same directory
-Compile C file
-gcc DJIA_Assess.c -o myFile
-Run File
-./myFile
+### Ensure DJIA file and C file are in the same directory  
+### Compile C file  
+gcc DJIA_Assess.c -o myFile  
+### Run File  
+./myFile  
 
 ## Output
 ### Example output:
